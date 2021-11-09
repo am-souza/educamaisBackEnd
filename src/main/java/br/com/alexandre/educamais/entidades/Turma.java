@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -29,7 +29,7 @@ public class Turma extends Entidade {
     @Enumerated
     private Periodo periodo;
     
-    private Date data;
+    private LocalDate data;
     
     @OneToOne
     private Materia materia;
