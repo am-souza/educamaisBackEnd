@@ -1,14 +1,12 @@
 package br.com.alexandre.educamais.entidades;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
-
-import javax.persistence.*;
-
 import lombok.EqualsAndHashCode;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,9 +16,11 @@ import java.util.Set;
 public class Atividade extends Entidade {
 
 	@Column(nullable = false)
-	private Date dtInicio;
+	private LocalDateTime dtInicio;
+
 	@Column(nullable = false)
-	private Date dtFim;
+	private LocalDateTime dtFim;
+
 	@Column(nullable = false)
 	private String nome; 
 

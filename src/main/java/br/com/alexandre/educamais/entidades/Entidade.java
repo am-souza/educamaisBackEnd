@@ -1,7 +1,6 @@
 package br.com.alexandre.educamais.entidades;
 
 import lombok.Data;
-import org.hibernate.annotations.NaturalId;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +13,8 @@ import java.io.Serializable;
 public abstract class Entidade implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    // @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 
 }

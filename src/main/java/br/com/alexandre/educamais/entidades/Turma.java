@@ -1,13 +1,10 @@
 package br.com.alexandre.educamais.entidades;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-
-import lombok.EqualsAndHashCode;
-import org.jetbrains.annotations.NotNull;
-
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,15 +13,23 @@ import java.util.Set;
 @EqualsAndHashCode(callSuper = false)
 public class Turma extends Entidade {
 
+    public enum Periodo {
+        INTEGRAL,
+        MATUTINO,
+        VESPERTINO,
+        NOTURNO
+    }
+
     @Column(nullable = false)
     private String nome;
 
     @Column(nullable = false)
     private String numeroTurma;
+
+    @Enumerated
+    private Periodo periodo;
     
-    private String periodo;
-    
-    private Date data;
+    private LocalDate data;
     
     @OneToOne
     private Materia materia;
