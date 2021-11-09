@@ -2,10 +2,8 @@ package br.com.alexandre.educamais.entidades;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-
 import lombok.EqualsAndHashCode;
 import org.apache.commons.lang3.StringUtils;
-import org.jetbrains.annotations.NotNull;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.*;

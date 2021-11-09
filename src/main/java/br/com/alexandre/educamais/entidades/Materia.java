@@ -1,15 +1,11 @@
 package br.com.alexandre.educamais.entidades;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
-
-import javax.persistence.*;
-
 import lombok.EqualsAndHashCode;
-import org.jetbrains.annotations.NotNull;
 
-import java.util.HashSet;
-import java.util.Set;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 
 @Data
 @Entity
