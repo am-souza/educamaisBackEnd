@@ -1,0 +1,16 @@
+package br.com.alexandre.educamais.controladores;
+
+import br.com.alexandre.educamais.entidades.Curso;
+import br.com.alexandre.educamais.servicos.CursoService;
+
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/cursos")
+public class CursoController extends EntidadeController<Curso, CursoService> {
+	
+}
+
