@@ -39,6 +39,11 @@ public class Usuario extends Entidade {
 
     private String email;
 
+    private Integer xp;
+
+    private Integer cash;
+
+
     @PreUpdate
     @PrePersist
     public void preSalvar() {
