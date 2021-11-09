@@ -4,10 +4,7 @@ import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,6 +15,9 @@ public class Questao extends Entidade {
 
     @Column(nullable = false)
     private String texto;
+
+    @OneToOne
+    private Materia materia;
 
     @JsonManagedReference
     @OneToMany(mappedBy = "questao", cascade = CascadeType.ALL, orphanRemoval = true)
