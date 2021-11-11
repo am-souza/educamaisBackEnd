@@ -11,10 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/avaliacoesalunos")
 public class AvaliacaoAlunoController extends EntidadeController<AvaliacaoAluno, AvaliacaoAlunoService>{
-
+/*
     @PostMapping("/entregar")
     public void entregar(@RequestBody AvaliacaoAluno avaliacaoAluno) {
         service.entregar(avaliacaoAluno);
     }
-
+*/
 }

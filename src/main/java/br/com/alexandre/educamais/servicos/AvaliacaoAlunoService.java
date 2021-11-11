@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AvaliacaoAlunoService extends EntidadeService <AvaliacaoAluno , AvaliacaoAlunoRepository>{
-
+/*
     public void entregar(AvaliacaoAluno avaliacaoAluno) {
         var avaliacao = avaliacaoAluno.getAvaliacao();
         var atividade = avaliacao.getAtividade();
@@ -25,5 +25,5 @@ public class AvaliacaoAlunoService extends EntidadeService <AvaliacaoAluno , Ava
         avaliacaoAluno.setNota(notaFinal);
         salvar(avaliacaoAluno);
     }
-
+*/
 }

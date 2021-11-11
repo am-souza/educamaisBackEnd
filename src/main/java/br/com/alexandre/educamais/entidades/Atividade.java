@@ -6,7 +6,6 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -14,12 +13,6 @@ import java.util.Set;
 @Entity
 @EqualsAndHashCode(callSuper = false)
 public class Atividade extends Entidade {
-
-	@Column(nullable = false)
-	private LocalDateTime dtInicio;
-
-	@Column(nullable = false)
-	private LocalDateTime dtFim;
 
 	@Column(nullable = false)
 	private String nome; 

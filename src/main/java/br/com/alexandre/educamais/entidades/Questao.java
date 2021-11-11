@@ -19,6 +19,7 @@ public class Questao extends Entidade {
     @OneToOne
     private Materia materia;
 
+    @OrderBy("id")
     @JsonManagedReference
     @OneToMany(mappedBy = "questao", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<QuestaoEscolha> escolhas = new HashSet<>();

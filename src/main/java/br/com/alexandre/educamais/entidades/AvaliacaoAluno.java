@@ -28,6 +28,4 @@ public class AvaliacaoAluno extends Entidade {
 
     private Integer nota;
 
-    private Integer pontuacaoTotal;
-
 }

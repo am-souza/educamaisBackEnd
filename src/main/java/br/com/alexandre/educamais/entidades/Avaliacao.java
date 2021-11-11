@@ -22,4 +22,6 @@ public class Avaliacao extends Entidade {
 
     private LocalDateTime fim;
 
+    private Integer valor;
+
 }

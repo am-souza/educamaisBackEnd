@@ -15,8 +15,8 @@ public class Materia extends Entidade {
 	@Column(nullable = false)
 	private String nome;
 
-	@OneToOne
-	private Usuario tutor;
+	//@OneToOne
+	//private Usuario tutor;
    
    
 }
