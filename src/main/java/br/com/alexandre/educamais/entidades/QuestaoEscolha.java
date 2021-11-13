@@ -1,6 +1,7 @@
 package br.com.alexandre.educamais.entidades;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -18,6 +19,7 @@ public class QuestaoEscolha extends Entidade {
 
     private String texto;
 
+    //@JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Boolean correta = false;
 
 }
