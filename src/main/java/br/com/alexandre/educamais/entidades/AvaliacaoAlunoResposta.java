@@ -10,7 +10,7 @@ import javax.persistence.OneToOne;
 
 @Data
 @Entity
-@EqualsAndHashCode(callSuper = false)
+@EqualsAndHashCode(callSuper = false, exclude = "avaliacaoAluno")
 public class AvaliacaoAlunoResposta extends Entidade {
 
     @ManyToOne

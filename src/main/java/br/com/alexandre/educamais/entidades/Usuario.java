@@ -13,7 +13,7 @@ import javax.persistence.*;
 @EqualsAndHashCode(callSuper = false)
 public class Usuario extends Entidade {
 
-    private static final String BCRYPT_REGEX = "^[$]2[abxy]?[$](?:0[4-9]|[12][0-9]|3[01])[$][./0-9a-zA-Z]{53}$";
+    private static final String BCRYPT_REGEX = "^\\$2[ayb]\\$.{56}$";
 
     public enum Perfil {
         ADMINISTRADOR,
@@ -54,7 +54,7 @@ public class Usuario extends Entidade {
         if (StringUtils.isBlank(nome)) {
             throw new RuntimeException("Nome não pode ser vazio");
         }
-        if (password != null && !BCRYPT_REGEX.matches(password)) {
+        if (password != null && password.length() < 60) {
             password = new BCryptPasswordEncoder().encode(password);
         }
     }
