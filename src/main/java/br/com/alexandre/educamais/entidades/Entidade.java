@@ -13,8 +13,8 @@ import java.io.Serializable;
 public abstract class Entidade implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-//    @GeneratedValue(strategy = GenerationType.TABLE)
+   // @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.TABLE)
     private Long id;
 
 }
