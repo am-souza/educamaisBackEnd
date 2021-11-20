@@ -10,8 +10,8 @@ import javax.persistence.Entity;
 @EqualsAndHashCode(callSuper = false)
 public class Item extends Entidade {
 
-   private String nome;
+    private String nome;
 
-   private Integer valor;
+    private Integer valor;
 
 }

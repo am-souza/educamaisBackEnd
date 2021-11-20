@@ -1,10 +1,12 @@
 package br.com.alexandre.educamais.entidades;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.OrderBy;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -16,8 +18,8 @@ public class Inventario extends Entidade {
    @OneToOne
    private Usuario usuario;
 
+   @ManyToMany
    @OrderBy("id")
-   @JsonManagedReference
-   @OneToMany
    private Set<Item> itens = new HashSet<>();
+
 }
